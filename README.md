@@ -19,3 +19,17 @@ syntax :-
         <a href="url" target="top"> Click here to see the results </a>
         <a href="url" target="blank"> Click here to see the results </a>
         <a href="url" target="blank"> Click here to see the results </a>
+
+input Type :-
+Button
+checkbox
+date
+email
+file
+image
+month
+password
+radio
+range
+time
+week
