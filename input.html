@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Types</title>
+</head>
+
+<body>
+    <form action="">
+        <div>
+            <!-- <img src="./neitLogo.png"><br><br> -->
+            <label for="fullName">Full Name : </label>
+            <input type="text" id="fullName" style="margin-left: 25px;">
+            <br><br>
+            <label for="rollNumber">Roll Number : </label>
+            <input type="number" id="rollNumber" style="margin-left: 3px;">
+            <br><br>
+            <label for="branch">Branch : </label>
+            <input type="text" id="branch" style="margin-left: 55px;">
+            <br><br>
+            <label for="hobies">Hobies : </label><br>
+            <input type="checkbox" id="cricket">
+            <label for="cricket">Cricket</label><br>
+            <input type="checkbox" id="basketball">
+            <label for="basketball">Basket Ball</label><br>
+            <input type="checkbox" id="kabaddi">
+            <label for="kabaddi">Kabaddi</label><br>
+            <input type="checkbox" id="onlineGame">
+            <label for="onlineGame">Online Game</label>
+
+            <br><br>
+            <label for="gender">Gender : </label><br>
+            <input type="radio" id="male" name="gender">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender">
+            <label for="female">Female</label>
+            <br><br>
+            <label for="photo">Passport size photo : </label>
+            <input type="file" id="photo" accept="image/*">
+            <br><br>
+            <label for="dob">Date of Birth : </label>
+            <input type="date" id="dob">
+            <br><br>
+            <label for="currTime">Current Time : </label>
+            <input type="time" id="currTime"><br>
+            <label for="password">Password : </label><br>
+            <input type="password" id="password">
+            <br>
+
+            <label for="rating">Rating : </label><br>
+            <input type="range" id="myRange" value="45" min="0" max="100">
+            <output id="demo">45</output>
+            <br>
+            <input type="submit">
+        </div>
+    </form>
+
+
+
+    <style>
+        form {
+            width: 400px;
+            margin: auto;
+            /* border: 2px solid gray; */
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 22px;
+            box-shadow: 2px 2px 50px gray;
+
+        }
+    </style>
+
+    <script>
+        var slider = document.getElementById("myRange");
+        var output = document.getElementById("demo");
+        output.innerHTML = slider.value;
+
+        slider.oninput = function () {
+            output.innerHTML = this.value;
+        }
+    </script>
+</body>
+
+</html>
