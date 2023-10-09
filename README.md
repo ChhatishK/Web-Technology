@@ -89,3 +89,4 @@ how to merge two xml file -->
 
 - add prefix to the first file to connect with second file.
 
+if same data occurs in both the file then it can be merged.
