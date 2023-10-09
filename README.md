@@ -77,7 +77,15 @@ Disadvantages -->
   <Address
      <name>Aryan</name>
      <address>PrayagRaj</address>
+
+  --External DTD
+  <!DOCTYPE Address
+     SYSTEM "Address dtd">
+  
      <phone>123456788</phone>
   </Address>
 
-  
+how to merge two xml file -->
+
+- add prefix to the first file to connect with second file.
+
