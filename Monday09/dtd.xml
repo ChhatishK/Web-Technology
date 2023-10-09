@@ -7,3 +7,22 @@
 <heading>Reminder</heading>
 <body>Don't forget me this weekend</body>
 </note>
+
+
+
+<!-- Merging program -->
+
+<root>
+ <h:table xmlns:h="fdfdf">
+ <h:tr>
+ <h:td>Apples</h:td>
+ <h:td>Bananas</h:td>
+ </h:tr>
+</h:table>
+
+ <f:table xmlns:f="fdfdf">
+ <f:name>Coffee Table</f:name>
+ <f:width>80</f:width>
+ <f:length>120</f:length>
+ </f:table>
+</root>
