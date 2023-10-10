@@ -90,3 +90,17 @@ how to merge two xml file -->
 - add prefix to the first file to connect with second file.
 
 if same data occurs in both the file then it can be merged.
+
+
+XSD (XML Schema Definition) -->
+- It is xml schema definition which is commonly used to descrive and validate structure and content of xml data.
+- It is nethod of expressing consparent about xml document.
+- It  is very much similar type of xml document.
+- Entension --> (.xs)
+
+- Syntax -->
+- add.xsd -->
+  - <xs:schema xmlns:xs="----">
+ 
+  - Simple XSD -->
+  - Tells 
