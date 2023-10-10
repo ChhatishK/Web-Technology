@@ -49,7 +49,10 @@ Disadvantages -->
 - It is used to define structure of document.
 - It contains list of legel element.
 - It is also used to performance and validation.
+- It does not support data types.
+- It is not extensible.
 
+  
 - Syntax (DTD) -->
 
 - Internal
@@ -97,10 +100,22 @@ XSD (XML Schema Definition) -->
 - It is nethod of expressing consparent about xml document.
 - It  is very much similar type of xml document.
 - Entension --> (.xs)
+- It is extensible.
+- It supports namespace.
+- 
+- 
+Two types of XSD -->
+-- Simple XSD
+-- Complex XSD
+
 
 - Syntax -->
 - add.xsd -->
   - <xs:schema xmlns:xs="----">
  
   - Simple XSD -->
-  - Tells 
+  - <xs:element name
+  -  = "phone" type xs:"int" />
+
+- Complex XSD -->
+- A complex type element is an XML element that contains other elements and/or attributes.
