@@ -108,7 +108,6 @@ Two types of XSD -->
 -- Simple XSD
 -- Complex XSD
 
-
 - Syntax -->
 - add.xsd -->
   - <xs:schema xmlns:xs="----">
@@ -119,3 +118,58 @@ Two types of XSD -->
 
 - Complex XSD -->
 - A complex type element is an XML element that contains other elements and/or attributes.
+
+XML with stylesheet -->
+- Syntax -->
+- <?xml:stylesheet type="text/css" href="xml1.css"?>
+
+- A DOM Document is an object which contain all the info of an html document.
+- It is collection of nodes, PC doc info organized in hierarical format.
+- DOM is defined standard to access and manipulate the document.
+- Prammmers can easily modify, delete and can create new element also, This is also used to far implement of DOM API.
+
+
+Advantage:-
+- It support both read and write operations and API is very easily and simple to use.
+- It is prefered when random access to widely  seperated parts of  document is required.
+
+
+Disadvantage :-
+- It required a lot of memory to convert whole html document.
+- It is comparatively slower than other parts of a document.
+
+XSLT - (eXtensible StyleSheet Language Transformation) --> 
+- It basically convert xml document to other document.
+- It is used to remove/add the attributes and elements and rearrange the elements.
+
+Sample.xsl --> 
+- <?xml version="1.0" encoding="UTF-8"?>
+- <xsl:stylesheet version="1.0" type="text/xsl" href="sample.xsl" ?>
+- <college>
+        - <name>Aryan</name>
+        - <roll_no>9004</roll_no>
+</college>
+
+<?xml version=""1.0 encoding="UTF-8" ?>
+<xsl:stylesheet version="1.0" type="text/xsl" href="sample.xsl">
+<xsl:template match="/">
+<html>
+        <body>
+                <table>
+                        <tr>
+                                <th>Name</th>
+                                <th>Roll_no</th>
+                        </tr>
+                        <xsl:foreach sheet="college"/class>
+                        <tr>
+                                <td><xsl:value of select="Name"/></td>
+                                <td><xsl:value of select="Roll_no"/></td>
+                        </tr>
+                        </xsl:foreach />
+                                
+                </table>
+        </body>
+</html>
+
+</xsl:template>
+</xsl:stylesheet>
