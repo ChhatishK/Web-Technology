@@ -1,0 +1,28 @@
+
+<xsl:stylesheet version="1.0" type="text/xsl" href="sample.xsl">
+    <xsl:template match="/">
+        <html>
+
+        <body>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Roll_no</th>
+                </tr>
+
+                <xsl:foreach sheet="college/class">
+                    <tr>
+                        <td>
+                            <xsl:value of select="name" />
+                        </td>
+                        <td>
+                            <xsl:value of select="roll_no" />
+                        </td>
+                    </tr>
+                </xsl:foreach />
+            </table>
+        </body>
+
+        </html>
+    </xsl:template>
+</xsl:stylesheet>  
