@@ -171,5 +171,12 @@ Sample.xsl -->
         </body>
 </html>
 
+
+
+
 </xsl:template>
 </xsl:stylesheet>
+
+
+Class selector with element -->
+p.big ex--> <p class="big"></p>
