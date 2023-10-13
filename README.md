@@ -180,3 +180,20 @@ Sample.xsl -->
 
 Class selector with element -->
 p.big ex--> <p class="big"></p>
+
+ID selector = #id_name
+Class selector = .classNAme
+element selector = elementName
+
+
+Heading -->
+- Datatypes -->
+- Premitive Data types ->
+- none, number, boolean, undefined, null
+
+- Non-premitive Data types ->
+- Object, Array, Regular Expression
+
+- Variable -->
+- Local variable
+- Global variable
