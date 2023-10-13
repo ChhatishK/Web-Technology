@@ -1,0 +1,28 @@
+
+<xsl:stylesheet version="1.0" type="text/xsl" href="sample.xsl">
+    <xsl:template match="/">
+        <html>
+
+        <body>
+            <table>
+                <tr>
+                    <th>Artist</th>
+                    <th>Title</th>
+                </tr>
+
+                <xsl:foreach sheet="cd">
+                    <tr>
+                        <td>
+                            <xsl:value-of select="artist" />
+                        </td>
+                        <td>
+                            <xsl:value-of select="title" />
+                        </td>
+                    </tr>
+                </xsl:foreach />
+            </table>
+        </body>
+
+        </html>
+    </xsl:template>
+</xsl:stylesheet>  
