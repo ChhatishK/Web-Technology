@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js </title>
+</head>
+
+<body>
+    <p>Create a js program to implement diaglogue,confirm, message popup box</p>
+    <!-- <div id="display" style="display: none;">
+        <p>The value of x: <span id="x"></span></p>
+        <p>The value of y: <span id="y"></span></p>
+        <p>The value of z: <span id="z"></span></p>
+    </div> -->
+    <!-- styling even and odd column in the table -->
+    <label for="first">Enter first number : </label>
+    <input type="number" id="first"><br><br>
+    <label for="second">Enter second number : </label>
+    <input type="number" id="second"><br><br>
+    <input type="submit" value="button" onclick="add()"><br><br>
+    <label for="result">Result : </label>
+    <input type="text" id="result">
+
+    <script>
+        function add() {
+
+            var a = document.getElementById("first").value;
+            var b = document.getElementById("second").value;
+            var result = a+b;
+            document.getElementById("result").value = result;
+        }
+    </script>
+</body>
+
+</html>

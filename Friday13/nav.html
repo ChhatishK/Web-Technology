@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            overflow-x: hidden;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+        .nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-bottom:25px;
+        }
+
+        h3 {
+            font-size: 18px;
+        }
+        h3:hover {
+            cursor: pointer;
+        }
+
+        .nav-items {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .nav-items>span {
+            padding: 18px;
+        }
+
+        .nav-items>span:hover{
+            cursor: pointer;
+            background-color: rgb(82, 137, 82);
+            
+        }
+        .nav-items a {
+            font-size: 18px;
+            text-decoration: none;
+        }
+
+
+        .page-container {
+            width: 100vw;
+        }
+
+        .page-container>div{
+            width: 100%;
+            height: 100vh;
+            color: red;
+
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="nav">
+            <div>
+                <h3>Logo</h3>
+            </div>
+            <div class="nav-items">
+                <span><a href="#home">Home</a></span>
+                <span><a href="#Blog">Blog</a></span>
+                <span><a href="#about-us">About us</a></span>
+                <span><a href="#contact-us">Contact us</a></span>
+            </div>
+        </div>
+
+        <div class="page-container">
+            <div id="home">
+                <h1>Home</h1>
+            </div>
+            <div id="Blog">
+                <h1>Blog</h1>
+            </div>
+            <div id="about-us">
+                <h1>About us</h1>
+            </div>
+            <div id="contact-us">
+                <h1>Contact us</h1>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

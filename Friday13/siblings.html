@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sibling Selector</title>
+
+    <style>
+        /* Sibling selector */
+        div~p {
+            color: blue;
+            font-size: larger;
+        }
+
+        /* Adjacent selector */
+        div+p {
+            color: red;
+        }
+
+        /* Class selector */
+        .class {
+            color: blueviolet;
+        }
+
+        /* Id selector */
+        #big {
+            font-size: 50px;
+        }
+        
+        /* Child selector */
+        .container>p {
+            background-color: #a39d9d;
+        } 
+        
+        /* element with class selector */
+        p.class2 {
+            font-size: 100px;
+        }
+
+        /* Pseudo selector */
+        p::first-letter {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>Lorem ipsum dolor sit amet consectetur.</p>
+        <p class="class">A generalised Sibling</p>
+        <p class="class2">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </div>
+    <p id="big">A generalised Sibling</p>
+    <p>A generalised Sibling</p>
+</body>
+</html>
