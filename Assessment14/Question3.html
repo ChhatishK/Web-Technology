@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Styled Dialog Boxes</title>
+    <style>
+        h3 {
+            font-size: 40px;
+        }
+
+        #demo1 {
+            width: 90px;
+            height: 90px;
+            background-color: rgb(225, 171, 171);
+            color: white;
+            font-size: 22px;
+            display: grid;
+            place-items: center;
+        }
+    </style>
+</head>
+<body>
+    <h3 onclick="myFunction(this, 'red')">1. Click me to change my color.</h3>
+
+        <script>
+    function myFunction(element, color) {
+        element.style.color = color;
+}
+</script>
+
+<div onmousemove="myMoveFunction()">
+    <p id="demo1">2. Hover your mouse</p>
+  </div>
+  
+<script>
+    let x = 0;
+    let y = 0;
+    let z = 0;
+    
+    function myMoveFunction() {
+      document.getElementById("demo1").innerHTML = z+=1;
+    }
+    
+    function myEnterFunction() {
+      document.getElementById("demo2").innerHTML = x+=1;
+    }
+    
+    function myOverFunction() {
+      document.getElementById("demo3").innerHTML = y+=1;
+    }
+    </script>
+
+<div class="button-container">
+    <button id="clickButton" style="width: 150px; height: 50px; background-color: #7ae052; border: none; border-radius: 10px;">3. Click me to count your click</button>
+</div>
+
+<div id="output">
+    <p id="clickCount" style="width: 120px; height: 30px; background-color: #2aa9e3; display: grid; place-items: center; border-radius: 8px;">Click count: 0</p>
+</div>
+
+<script>
+    const clickButton = document.getElementById('clickButton');
+    const clickCount = document.getElementById('clickCount');
+    let count = 0;
+
+    clickButton.onclick = function() {
+        count++;
+        clickCount.textContent = "Click count :"  +count ;
+    };
+</script>
+
+4. To show that a key is pressed.
+<input type = "text" onkeypress = "sayHello()">
+<script>
+    <!--
+       function sayHello() {
+          alert("A key is pressed.")
+       }
+    //-->
+ </script>
+
+<br><br>
+
+<form method = "POST" action = "https://www.google.com/" onsubmit = "return validate()">
+    5. Click on submit to open google.
+    <a href="https://www.google.com/"></a><input type = "submit" value = "Submit" /></a>
+ </form>      
+<script type = "text/javascript">
+    <!--
+       function validation() {
+          all validation goes here
+          .........
+          return either true or false
+       }
+    //-->
+ </script> 
+</body>
+</html>

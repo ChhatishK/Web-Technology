@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Styled Dialog Boxes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+
+        #container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 50px;
+        }
+
+        .dialog-button {
+            background-color: #3a6868;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.2s;
+        }
+
+        .dialog-button:hover {
+            background-color: #231683;
+        }
+
+        .styled-dialog {
+            display: none;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            max-width: 300px;
+            padding: 20px;
+            text-align: center;
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1000;
+        }
+
+        .styled-dialog h3 {
+            color: #6cdb34;
+        }
+
+        .styled-dialog button {
+            background-color: #db3447;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+
+        .styled-dialog button:hover {
+            background-color: #de2caf;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <button class="dialog-button" onclick="showConfirmBox()">Click here for Confirm Box</button>
+        <button class="dialog-button" onclick="showPromptBox()">Click me to take input</button>
+        <button class="dialog-button" onclick="showAlertBox()">Click me to see Alert Box</button>
+    </div>
+
+    <div id="confirm-dialog" class="styled-dialog">
+        <h3>Confirm Box</h3>
+        <p>This is the last chance to edit your information</p>
+        <button onclick="confirmAction(true)">Got It</button>
+        <button onclick="confirmAction(false)">No found</button>
+    </div>
+
+    <div id="prompt-dialog" class="styled-dialog">
+        <h3>Prompt Box</h3>
+        <p>Please provide any of the input</p>
+        <input type="text" id="user-input" />
+        <button onclick="promptAction()">OK</button>
+    </div>
+
+    <div id="alert-dialog" class="styled-dialog">
+        <h3>Alert Box</h3>
+        <p id="alert-message"></p>
+        <button onclick="closeAlertBox()">Got It</button>
+    </div>
+
+    <script>
+        function showConfirmBox() {
+            const confirmDialog = document.getElementById('confirm-dialog');
+            confirmDialog.style.display = 'block';
+        }
+
+        function confirmAction(result) {
+            const confirmDialog = document.getElementById('confirm-dialog');
+            confirmDialog.style.display = 'none';
+            if (result) {
+                showAlertBox("You chose to proceed.");
+            } else {
+                showAlertBox("You chose to cancel.");
+            }
+        }
+
+        function showPromptBox() {
+            const promptDialog = document.getElementById('prompt-dialog');
+            promptDialog.style.display = 'block';
+        }
+
+        function promptAction() {
+            const promptDialog = document.getElementById('prompt-dialog');
+            const userInput = document.getElementById('user-input').value;
+            promptDialog.style.display = 'none';
+            if (userInput) {
+                showAlertBox("Hello, " + userInput + "!");
+            } else {
+                showAlertBox("You didn't enter a name.");
+            }
+        }
+
+        function showAlertBox(message) {
+            const alertDialog = document.getElementById('alert-dialog');
+            const alertMessage = document.getElementById('alert-message');
+            alertMessage.textContent = message;
+            alertDialog.style.display = 'block';
+        }
+
+        function closeAlertBox() {
+            const alertDialog = document.getElementById('alert-dialog');
+            alertDialog.style.display = 'none';
+        }
+    </script>
+</body>
+</html>

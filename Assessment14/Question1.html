@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day and Date Swp</title>
+    <style>
+        body {
+            background-color: #aba1a1;
+        }
+        .box {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20%;
+            font-size: 25px;
+        }
+
+        .box button {
+            font-size: 22px;
+            background-color: #8cacc8;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <p id="day"></p>
+        <button id="toggle" onclick="swapDate()" style="display: block;">SwapDate&Day</button>
+        <button id="tg" onclick="dateSwap()" style="display: none;">SwapDate&Day</button>
+        <p id="date"></p>
+    </div>
+    <script>
+        var today = new Date();
+        var days = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
+        var day = today.getDay();
+        var date = today.getDate();
+
+        var x = document.getElementById("day");
+        var y = document.getElementById("date");
+            x.innerHTML = days[day];
+            y.innerHTML = date;
+        function dateSwap() {
+            document.getElementById("tg").style.display = 'none';
+            document.getElementById("toggle").style.display = "block";
+            x.innerHTML = days[day];
+            y.innerHTML = date;
+        }
+
+        function swapDate() {
+            document.getElementById("toggle").style.display = 'none';
+            document.getElementById("tg").style.display = 'block';
+            x.innerHTML = date;
+            y.innerHTML = days[day];
+        }
+    </script>
+</body>
+
+</html>
