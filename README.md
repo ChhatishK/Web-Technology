@@ -197,3 +197,21 @@ Heading -->
 - Variable -->
 - Local variable
 - Global variable
+- 
+
+
+Objects -->
+A car is an object . A car has property like color, weight, height etc. All car have same property or method and can be differ.
+
+Syntax ->
+const car = {type : "Hat", color: "red"}
+
+Access method -->
+- objectName.propertyName
+- function add(a, b);
+
+- js fn. def can not specify data type of parameters.
+- It do not perform type checking.
+- js fn do not check no. of arguments.
+- parameter type --> Best and spread.
+- 
